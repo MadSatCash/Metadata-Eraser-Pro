@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metadata Eraser Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="title-bar">
+    <span>Metadata Eraser Pro</span>
+  </div>
+
+  <main class="app-container">
+    <header>
+      <h1 data-i18n="Clean Your Images">Clean Your Images</h1>
+      <p data-i18n="Elimina EXIF y metadatos sin pÃ©rdida de calidad (Lossless)">Elimina EXIF y metadatos sin pÃ©rdida de calidad (Lossless)</p>
+      
+      <div class="lang-switch-container">
+        <div class="lang-switch">
+          <button id="lang-es" class="lang-btn active">ES</button>
+          <button id="lang-en" class="lang-btn">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="drop-zone" class="drop-zone">
+      <div class="drop-content">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+        <span class="drop-text" data-i18n="Arrastra imÃ¡genes JPG/PNG aquÃ­">Arrastra imÃ¡genes JPG/PNG aquÃ­</span>
+        <span class="drop-sub" data-i18n="o haz clic para seleccionar">o haz clic para seleccionar</span>
+      </div>
+      <input type="file" id="file-input" multiple accept="image/jpeg, image/png" hidden>
+    </div>
+
+    <div class="results-container">
+      <ul id="results-list" class="results-list">
+        <!-- Results will be injected here -->
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Creado por <a href="https://munia.cash/profile/madsatcash" id="author-link" target="_blank">MadSatCash</a></p>
+  </footer>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
