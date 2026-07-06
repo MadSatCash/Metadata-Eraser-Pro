@@ -1,8 +1,8 @@
 # Metadata Eraser Pro
 
-Metadata Eraser Pro is a lightweight Electron desktop app for cleaning image metadata without recompressing the file.
+Metadata Eraser Pro is a fast, lightweight Electron desktop app for cleaning image metadata without recompressing the file.
 
-It was built for a very practical reason: some platforms inspect embedded metadata and provenance chunks, then show labels such as AI-generated image. This app helps remove common metadata from JPG and PNG files, including EXIF and non-essential PNG chunks, while preserving image quality because it does not re-encode the pixels.
+It was built for a very practical reason: some platforms inspect embedded metadata and provenance chunks, then show labels such as AI-generated image. But the app is useful beyond that specific case. It removes hidden metadata from JPG and PNG files, including EXIF and non-essential PNG chunks, while preserving image quality because it does not re-encode the pixels.
 
 ## What it does
 
@@ -12,6 +12,7 @@ It was built for a very practical reason: some platforms inspect embedded metada
 - Shows which metadata fields or chunks were removed
 - Supports drag and drop
 - Includes a simple Spanish and English interface
+- Runs very quickly even on ordinary desktop hardware
 
 ## Why this can be useful
 
@@ -19,8 +20,26 @@ It was built for a very practical reason: some platforms inspect embedded metada
 - Remove hidden camera, software, or provenance information
 - Clean PNG auxiliary chunks such as text, timestamps, color profile metadata, and EXIF-like blocks
 - Reduce the chance of platforms reading embedded provenance markers
+- Clean images more generally before posting, sharing, archiving, or reusing them
 
 Important note: this can help when a platform is relying on embedded metadata, but it does not guarantee that every service will stop labeling an image. Some systems may also use other detection methods.
+
+Also, "all metadata" depends on the format. In the current version, the app targets:
+
+- EXIF and related embedded metadata in JPG / JPEG files
+- Non-essential auxiliary chunks in PNG files
+
+So it removes a broad set of hidden metadata for those formats, but not every possible signal across every image format or detection system.
+
+## Performance and footprint
+
+The metadata cleaning itself is lightweight and fast. The heavy part is not the cleaning logic, but the Electron and Node runtime that the desktop app depends on.
+
+In practice, that means:
+
+- The app feels quick in normal use
+- The actual metadata removal is inexpensive
+- Most of the install size comes from bundling a desktop runtime, not from the cleaner itself
 
 ## Supported formats
 
