@@ -1,0 +1,15 @@
+{
+  "Clean Your Images": "Clean Your Images",
+  "Elimina EXIF y metadatos sin pÃ©rdida de calidad (Lossless)": "Remove EXIF and metadata with zero quality loss (Lossless)",
+  "Arrastra imÃ¡genes JPG/PNG aquÃ­": "Drag and drop JPG/PNG images here",
+  "o haz clic para seleccionar": "or click to select",
+  "Creado por ": "Created by ",
+  "No se detectaron archivos vÃ¡lidos (.jpg, .png). Archivos recibidos: ": "No valid files detected (.jpg, .png). Files received: ",
+  "Error: La ruta del archivo estÃ¡ oculta (vacÃ­a). Esto suele ocurrir al arrastrar directamente desde la barra de descargas de Chrome o carpetas virtuales. Por favor, usa el clic para seleccionar la imagen, o muÃ©vela al Escritorio primero y arrÃ¡strala desde allÃ­.": "Error: File path is hidden (empty). This usually happens when dragging directly from the Chrome downloads bar or virtual folders. Please click to select the image instead, or move it to your Desktop first and drag it from there.",
+  "Error crÃ­tico de UI: ": "Critical UI Error: ",
+  "Guardado: ": "Saved: ",
+  "Limpio": "Clean",
+  "Error": "Error",
+  "Metadatos eliminados": "Removed metadata",
+  "No se encontraron metadatos ocultos.": "No hidden metadata found."
+}
