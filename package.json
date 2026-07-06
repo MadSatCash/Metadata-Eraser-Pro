@@ -1,0 +1,28 @@
+{
+  "name": "metadata-eraser-pro",
+  "version": "1.0.0",
+  "description": "Desktop app to remove EXIF and non-essential PNG metadata from images without recompression.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "metadata",
+    "exif",
+    "png",
+    "privacy",
+    "c2pa",
+    "images"
+  ],
+  "author": "MadSatCash",
+  "license": "ISC",
+  "dependencies": {
+    "piexifjs": "^1.0.6",
+    "png-chunks-encode": "^1.0.0",
+    "png-chunks-extract": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^43.0.0"
+  }
+}
