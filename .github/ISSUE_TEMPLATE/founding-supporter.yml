@@ -1,0 +1,42 @@
+name: Founding supporter request
+description: Request one of the two USD 25 founding supporter credits.
+title: "Founding supporter request: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for considering support for Metadata Eraser Pro. An accepted credit includes one public display name and one HTTPS link on the landing page and README for 12 months. It does not include an endorsement or any traffic guarantee. Do not send payment until this request is reviewed and accepted.
+  - type: input
+    id: display-name
+    attributes:
+      label: Display name
+      description: The public name to show in the supporter credit.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: HTTPS link
+      description: The lawful public page the credit should link to.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: One or two sentences explaining the project or business.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms
+      options:
+        - label: The linked project is lawful and the submitted information is accurate.
+          required: true
+        - label: I understand this credit is not an endorsement or a guarantee of traffic, clicks or sales.
+          required: true
+        - label: I will not send payment until the request is accepted.
+          required: true
+

@@ -12,6 +12,17 @@ If the app saves you time, the suggested Supporter Edition price is **USD 20 equ
 
 Released executables are not Authenticode-signed. Windows may show an unknown-publisher warning. Verify the file against `SHA256SUMS.txt` on the release page before running it.
 
+## Founding supporter spots
+
+Two founding supporter credits are available for **USD 25 equivalent in Bitcoin Cash**. Each accepted supporter receives one display name and one HTTPS link on the project landing page and in this README for 12 months.
+
+This is public recognition for supporting the project, not an endorsement or a guarantee of traffic, clicks or sales. Only lawful, non-deceptive projects are eligible. [Request a spot before sending payment](https://github.com/MadSatCash/Metadata-Eraser-Pro/issues/new?template=founding-supporter.yml).
+
+### Founding supporters
+
+- Spot available
+- Spot available
+
 ## What it does
 
 - Removes EXIF, XMP, Photoshop/IPTC, comments, C2PA/JUMBF and other non-essential metadata from JPG/JPEG images
