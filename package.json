@@ -1,10 +1,11 @@
 {
   "name": "metadata-eraser-pro",
-  "version": "1.0.0",
-  "description": "Desktop app to remove EXIF and non-essential PNG metadata from images without recompression.",
+  "version": "1.1.0",
+  "description": "Remove EXIF, XMP, IPTC, C2PA and non-essential PNG metadata without recompressing images.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "test": "node tests/cleaner.test.js"
   },
   "keywords": [
     "electron",
@@ -17,6 +18,8 @@
   ],
   "author": "MadSatCash",
   "license": "ISC",
+  "repository": "https://github.com/MadSatCash/Metadata-Eraser-Pro",
+  "homepage": "https://madsatcash.github.io/Metadata-Eraser-Pro/",
   "dependencies": {
     "piexifjs": "^1.0.6",
     "png-chunks-encode": "^1.0.0",
@@ -24,5 +27,33 @@
   },
   "devDependencies": {
     "electron": "^43.0.0"
+  },
+  "overrides": {
+    "undici": "^7.29.0"
+  },
+  "build": {
+    "appId": "cash.munia.metadataeraserpro",
+    "productName": "Metadata Eraser Pro",
+    "asar": true,
+    "artifactName": "Metadata-Eraser-Pro-v${version}-Windows-Portable.${ext}",
+    "files": [
+      "main.js",
+      "src/**/*",
+      "icon.png",
+      "package.json",
+      "LICENSE"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon.png"
+    }
   }
 }
+

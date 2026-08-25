@@ -1,4 +1,4 @@
-let currentLang = 'es';
+let currentLang = navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en';
 let translations = { en: null };
 
 async function loadTranslations() {
@@ -7,12 +7,32 @@ async function loadTranslations() {
     translations.en = await res.json();
   } catch(e) {
     console.error("No se pudo cargar el diccionario:", e);
+  } finally {
+    updateUI();
   }
 }
 
 function t(key) {
   if (currentLang === 'es' || !translations.en) return key;
   return translations.en[key] || key;
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+let messageTimer;
+function showMessage(message) {
+  const box = document.getElementById('ui-message');
+  box.textContent = message;
+  box.hidden = false;
+  clearTimeout(messageTimer);
+  messageTimer = setTimeout(() => { box.hidden = true; }, 9000);
 }
 
 function updateUI() {
@@ -80,13 +100,13 @@ async function handleFiles(files) {
     });
 
     if (validFiles.length === 0) {
-      alert(t("No se detectaron archivos vÃ¡lidos (.jpg, .png). Archivos recibidos: ") + files.length);
+      showMessage(t("No se detectaron archivos válidos (.jpg, .png). Archivos recibidos: ") + files.length);
       return;
     }
 
     const filePaths = validFiles.map(file => window.api.getPath(file));
     if (!filePaths[0]) {
-      alert(t("Error: La ruta del archivo estÃ¡ oculta (vacÃ­a). Esto suele ocurrir al arrastrar directamente desde la barra de descargas de Chrome o carpetas virtuales. Por favor, usa el clic para seleccionar la imagen, o muÃ©vela al Escritorio primero y arrÃ¡strala desde allÃ­."));
+      showMessage(t("Error: La ruta del archivo está oculta (vacía). Esto suele ocurrir al arrastrar directamente desde la barra de descargas de Chrome o carpetas virtuales. Por favor, usa el clic para seleccionar la imagen, o muévela al Escritorio primero y arrástrala desde allí."));
       return;
     }
     
@@ -94,7 +114,7 @@ async function handleFiles(files) {
     
     renderResults(results);
   } catch (error) {
-    alert(t("Error crÃ­tico de UI: ") + error.message);
+    showMessage(t("Error crítico de UI: ") + error.message);
   }
 }
 
@@ -109,7 +129,7 @@ function renderResults(results) {
     if (res.success) {
       let metaHtml;
       if (res.removedTags && res.removedTags.length > 0) {
-        const tagItems = res.removedTags.map(tag => `<li class="meta-tag-item">${tag}</li>`).join('');
+        const tagItems = res.removedTags.map(tag => `<li class="meta-tag-item">${escapeHtml(tag)}</li>`).join('');
         metaHtml = `<div class="removed-meta">
           <span class="meta-label">${t("Metadatos eliminados")} (${res.removedTags.length}):</span>
           <ul class="meta-tag-list">${tagItems}</ul>
@@ -120,8 +140,8 @@ function renderResults(results) {
 
       li.innerHTML = `
         <div class="result-info">
-          <span class="result-name">${fileName}</span>
-          <span class="result-path" title="${res.resultPath}">${t("Guardado: ")}${res.resultPath}</span>
+          <span class="result-name">${escapeHtml(fileName)}</span>
+          <span class="result-path" title="${escapeHtml(res.resultPath)}">${escapeHtml(t("Guardado: "))}${escapeHtml(res.resultPath)}</span>
           ${metaHtml}
         </div>
         <span class="status-badge status-success">${t("Limpio")}</span>
@@ -129,8 +149,8 @@ function renderResults(results) {
     } else {
       li.innerHTML = `
         <div class="result-info">
-          <span class="result-name">${fileName}</span>
-          <span class="result-path" style="color: var(--error);">${res.error}</span>
+          <span class="result-name">${escapeHtml(fileName)}</span>
+          <span class="result-path" style="color: var(--error);">${escapeHtml(res.error)}</span>
         </div>
         <span class="status-badge status-error">${t("Error")}</span>
       `;
@@ -140,3 +160,4 @@ function renderResults(results) {
     resultsList.prepend(li);
   });
 }
+

@@ -9,3 +9,4 @@ contextBridge.exposeInMainWorld('api', {
     return file.path;
   }
 });
+

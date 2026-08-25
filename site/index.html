@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Remove hidden JPG and PNG metadata locally without recompressing your images.">
+  <meta name="theme-color" content="#0a0a0c">
+  <title>Metadata Eraser Pro — Private, local, lossless</title>
+  <style>
+    :root{--bg:#0a0a0c;--panel:#141419;--panel2:#1b1b22;--line:#30303a;--text:#f4f4f7;--muted:#a1a1ad;--accent:#7380ff;--green:#38cf7a;--red:#ff7f79}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 70% 0,#20203b 0,transparent 35%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{display:flex;align-items:center;gap:11px;font-weight:750}.logo{display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:linear-gradient(145deg,#8992ff,#505ac9);font-size:20px}.nav a{color:var(--muted);text-decoration:none;font-size:14px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center;padding:78px 0 92px}.eyebrow{color:#aeb5ff;font-size:13px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(46px,6vw,76px);line-height:1.01;letter-spacing:-.055em;margin:16px 0 24px}.hero p{font-size:19px;color:var(--muted);max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:11px;padding:13px 18px;font-weight:750;text-decoration:none;cursor:pointer;background:var(--panel2);color:var(--text);font-size:15px}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.fine{font-size:13px;color:var(--muted);margin-top:13px}.mock{border:1px solid #373746;background:#0f0f13;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.45);overflow:hidden}.mockbar{height:32px;background:#17171c;border-bottom:1px solid #292932;padding:8px 14px;color:#777784;font-size:11px}.mockbody{text-align:center;padding:34px 28px 28px}.mockbody h2{margin:0 0 6px;font-size:27px}.mockbody p{font-size:13px;margin:0;color:#858591}.drop{margin-top:28px;border:1px dashed #4a4a58;border-radius:14px;padding:42px 18px;background:#15151a}.drop svg{color:var(--accent)}.drop strong{display:block;margin-top:10px}.result{display:flex;justify-content:space-between;align-items:center;text-align:left;margin-top:14px;padding:12px 14px;border:1px solid #2f2f38;border-radius:10px;color:#b8b8c2;font-size:12px}.clean{color:var(--green);font-weight:800}.section{padding:85px 0;border-top:1px solid #202027}.section h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.035em;margin:0 0 16px}.lead{color:var(--muted);font-size:18px;max-width:760px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.card{background:linear-gradient(145deg,#17171c,#111115);border:1px solid #292932;border-radius:15px;padding:24px}.card h3{margin:12px 0 8px}.card p{margin:0;color:var(--muted);font-size:15px}.icon{font-size:23px}.checkout{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:start}.pricebox{background:var(--panel);border:1px solid #34343e;border-radius:17px;padding:28px}.price{font-size:48px;font-weight:850;letter-spacing:-.04em}.price span{font-size:17px;color:var(--muted);font-weight:600}.bch{margin:16px 0;color:#c8c8d1}.address{display:block;background:#0d0d11;border:1px solid #303039;border-radius:9px;padding:11px;word-break:break-all;font:12px ui-monospace,SFMono-Regular,Consolas,monospace;color:#d4d4dd}.checkout .btn{width:100%;margin-top:10px}.status{min-height:22px;color:var(--green);font-size:13px;margin-top:8px}.honesty{border-left:3px solid var(--accent);padding-left:17px;color:var(--muted)}.steps{margin:28px 0 0;padding:0;list-style:none;counter-reset:s}.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;margin:16px 0;color:var(--muted)}.steps li:before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#24243a;color:#cdd1ff;font-weight:800}.legal{font-size:13px;color:#858590;max-width:850px}.footer{padding:35px 0 55px;border-top:1px solid #202027;color:#777784;font-size:13px;display:flex;justify-content:space-between;gap:20px}.badge{display:inline-block;color:#9fa8ff;background:#20203a;border:1px solid #32325a;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700;margin:5px 5px 0 0}
+    @media(max-width:820px){.hero,.checkout{grid-template-columns:1fr}.hero{padding-top:35px}.grid{grid-template-columns:1fr}.nav>a{display:none}.footer{display:block}.mock{max-width:620px}.section{padding:65px 0}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav"><div class="brand"><span class="logo" aria-hidden="true">◇</span><span>Metadata Eraser Pro</span></div><a href="https://github.com/MadSatCash/Metadata-Eraser-Pro">Source code on GitHub</a></nav>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Local privacy for Windows</div>
+          <h1>Share the image.<br>Not its hidden history.</h1>
+          <p>Remove EXIF, GPS, XMP, IPTC, C2PA and non-essential PNG metadata without uploading the file or recompressing its pixels.</p>
+          <div class="actions"><a class="btn primary" href="#support">Get the portable edition</a><a class="btn" href="https://github.com/MadSatCash/Metadata-Eraser-Pro">Inspect the source</a></div>
+          <div class="fine">Windows 10/11 x64 · JPG/JPEG + PNG · English + Spanish · No subscription</div>
+        </div>
+        <div class="mock" aria-label="Application interface preview">
+          <div class="mockbar">Metadata Eraser Pro v1.1.0</div>
+          <div class="mockbody"><h2>Clean Your Images</h2><p>Remove EXIF and metadata with zero quality loss</p><div class="drop"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5M12 3v12"/></svg><strong>Drag and drop JPG/PNG images here</strong></div><div class="result"><span>family-photo_clean.jpg<br><small>EXIF · GPS · Camera model removed</small></span><span class="clean">CLEAN</span></div></div>
+        </div>
+      </section>
+
+      <section class="section"><h2>Small tool, clear job.</h2><p class="lead">The visible image stays the same. Metadata blocks are removed locally and a new cleaned copy is saved beside the original.</p><div class="grid">
+        <article class="card"><div class="icon">◈</div><h3>Lossless image data</h3><p>JPEG compressed data is verified byte-for-byte. The app does not run a lossy export over your photo.</p></article>
+        <article class="card"><div class="icon">⌂</div><h3>Local processing</h3><p>Your images never leave the computer. The desktop app uses no analytics, account or cloud upload.</p></article>
+        <article class="card"><div class="icon">◎</div><h3>Useful detail</h3><p>See which hidden fields or chunks were removed instead of trusting a vague “done” message.</p></article>
+      </div><div style="margin-top:24px"><span class="badge">EXIF + GPS</span><span class="badge">XMP + IPTC</span><span class="badge">C2PA/JUMBF</span><span class="badge">PNG text + timestamps</span><span class="badge">Batch selection</span></div></section>
+
+      <section class="section checkout" id="support">
+        <div><h2>Supporter Edition</h2><p class="lead">A ready-to-run Windows portable build, offered as an honest purchase that supports maintenance.</p><p class="honesty">The source code remains free under the ISC License. Payment does not unlock secret functionality; you are paying for the convenient build and supporting future fixes.</p><ol class="steps"><li><span>Send the displayed BCH amount to the address.</span></li><li><span>Download the portable executable from the official GitHub release.</span></li><li><span>Verify its SHA-256 checksum before running it.</span></li></ol></div>
+        <div class="pricebox"><div class="price">$20 <span>USD suggested</span></div><p class="bch">Current estimate: <strong id="bchAmount">0.075 BCH</strong></p><code class="address" id="address">bitcoincash:qr7fra8l42kdarp3d85gzsrt308j9uw97c4ej9za74</code><button class="btn" id="copyPayment">Copy BCH payment request</button><div class="status" id="copyStatus"></div><a class="btn primary" href="https://github.com/MadSatCash/Metadata-Eraser-Pro/releases/download/v1.1.0/Metadata-Eraser-Pro-v1.1.0-Windows-Portable.exe">Download Windows Portable</a><a class="btn" href="https://github.com/MadSatCash/Metadata-Eraser-Pro/releases/download/v1.1.0/SHA256SUMS.txt">Download SHA-256 checksum</a><p class="fine">Honor-based supporter purchase. BCH transactions are irreversible. Payments are final except where applicable law requires otherwise.</p></div>
+      </section>
+
+      <section class="section"><h2>Important limits</h2><p class="legal">Metadata Eraser Pro supports JPG/JPEG and PNG. Removing embedded metadata cannot guarantee how a social platform will label an image because services may use signals outside the file. Keep originals when metadata could matter for legal, archival or authorship purposes. The Windows executable is not Authenticode-signed and may trigger an unknown-publisher warning; verify the published checksum. Software is provided as-is under the ISC License.</p></section>
+    </main>
+    <footer class="footer"><span>© 2026 MadSatCash · Metadata Eraser Pro</span><span><a href="https://github.com/MadSatCash/Metadata-Eraser-Pro/blob/main/LICENSE">License</a> · <a href="https://github.com/MadSatCash/Metadata-Eraser-Pro/issues">Support</a></span></footer>
+  </div>
+  <script>
+    const address='bitcoincash:qr7fra8l42kdarp3d85gzsrt308j9uw97c4ej9za74';
+    let amount='0.075';
+    async function refreshPrice(){try{const r=await fetch('https://api.coinbase.com/v2/prices/BCH-USD/spot');if(!r.ok)return;const j=await r.json();const price=Number(j.data.amount);if(price>0){amount=(20/price).toFixed(6);document.getElementById('bchAmount').textContent=amount+' BCH';}}catch(_){}}
+    document.getElementById('copyPayment').addEventListener('click',async()=>{const request=address+'?amount='+amount+'&message='+encodeURIComponent('Metadata Eraser Pro Supporter Edition');try{await navigator.clipboard.writeText(request);document.getElementById('copyStatus').textContent='Payment request copied.';}catch(_){document.getElementById('copyStatus').textContent='Copy the address and send '+amount+' BCH.';}});
+    refreshPrice();
+  </script>
+</body>
+</html>
+

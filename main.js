@@ -61,3 +61,4 @@ ipcMain.handle('clean-images', async (event, filePaths) => {
   }
   return results;
 });
+
