@@ -8,7 +8,7 @@ The ready-to-run **Windows Portable edition** is available from the [official re
 
 If the app saves you time, the suggested Supporter Edition price is **USD 20 equivalent in Bitcoin Cash**. The source remains free and the download is intentionally honor-based: supporters pay for the convenient build and continued maintenance, not for secret code.
 
-[Get the Supporter Edition or contribute](https://raw.githack.com/MadSatCash/Metadata-Eraser-Pro/main/site/index.html)
+[Get the Supporter Edition or contribute](https://htmlpreview.github.io/?https://raw.githubusercontent.com/MadSatCash/Metadata-Eraser-Pro/main/site/index.html)
 
 Released executables are not Authenticode-signed. Windows may show an unknown-publisher warning. Verify the file against `SHA256SUMS.txt` on the release page before running it.
 
