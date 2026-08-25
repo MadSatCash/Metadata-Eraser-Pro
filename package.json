@@ -19,7 +19,7 @@
   "author": "MadSatCash",
   "license": "ISC",
   "repository": "https://github.com/MadSatCash/Metadata-Eraser-Pro",
-  "homepage": "https://madsatcash.github.io/Metadata-Eraser-Pro/",
+  "homepage": "https://raw.githack.com/MadSatCash/Metadata-Eraser-Pro/main/site/index.html",
   "dependencies": {
     "piexifjs": "^1.0.6",
     "png-chunks-encode": "^1.0.0",
